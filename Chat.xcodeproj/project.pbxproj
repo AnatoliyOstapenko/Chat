@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		FABCBD4B26B69E8700D9B7D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCBD4A26B69E8700D9B7D4 /* AppDelegate.swift */; };
 		FABCBD4D26B69E8700D9B7D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCBD4C26B69E8700D9B7D4 /* SceneDelegate.swift */; };
-		FABCBD4F26B69E8700D9B7D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCBD4E26B69E8700D9B7D4 /* ViewController.swift */; };
+		FABCBD4F26B69E8700D9B7D4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCBD4E26B69E8700D9B7D4 /* StartViewController.swift */; };
 		FABCBD5226B69E8700D9B7D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABCBD5026B69E8700D9B7D4 /* Main.storyboard */; };
 		FABCBD5426B69E8C00D9B7D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABCBD5326B69E8C00D9B7D4 /* Assets.xcassets */; };
 		FABCBD5726B69E8C00D9B7D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABCBD5526B69E8C00D9B7D4 /* LaunchScreen.storyboard */; };
+		FABCBD6026B69EA800D9B7D4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FABCBD5F26B69EA800D9B7D4 /* README.md */; };
+		FABCBD6626B69F5500D9B7D4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCBD6526B69F5500D9B7D4 /* RegisterViewController.swift */; };
+		FABCBD6A26B69FFC00D9B7D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCBD6926B69FFC00D9B7D4 /* LoginViewController.swift */; };
+		FABCBD6D26B6A01800D9B7D4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCBD6C26B6A01800D9B7D4 /* ChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FABCBD4726B69E8700D9B7D4 /* Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABCBD4A26B69E8700D9B7D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FABCBD4C26B69E8700D9B7D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FABCBD4E26B69E8700D9B7D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FABCBD4E26B69E8700D9B7D4 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		FABCBD5126B69E8700D9B7D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FABCBD5326B69E8C00D9B7D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FABCBD5626B69E8C00D9B7D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FABCBD5826B69E8C00D9B7D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABCBD5F26B69EA800D9B7D4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FABCBD6526B69F5500D9B7D4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		FABCBD6926B69FFC00D9B7D4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FABCBD6C26B6A01800D9B7D4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,7 @@
 		FABCBD3E26B69E8700D9B7D4 = {
 			isa = PBXGroup;
 			children = (
+				FABCBD5F26B69EA800D9B7D4 /* README.md */,
 				FABCBD4926B69E8700D9B7D4 /* Chat */,
 				FABCBD4826B69E8700D9B7D4 /* Products */,
 			);
@@ -58,13 +67,32 @@
 			children = (
 				FABCBD4A26B69E8700D9B7D4 /* AppDelegate.swift */,
 				FABCBD4C26B69E8700D9B7D4 /* SceneDelegate.swift */,
-				FABCBD4E26B69E8700D9B7D4 /* ViewController.swift */,
-				FABCBD5026B69E8700D9B7D4 /* Main.storyboard */,
+				FABCBD6226B69EBC00D9B7D4 /* View */,
+				FABCBD6326B69ECB00D9B7D4 /* Controller */,
 				FABCBD5326B69E8C00D9B7D4 /* Assets.xcassets */,
 				FABCBD5526B69E8C00D9B7D4 /* LaunchScreen.storyboard */,
 				FABCBD5826B69E8C00D9B7D4 /* Info.plist */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		FABCBD6226B69EBC00D9B7D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FABCBD5026B69E8700D9B7D4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FABCBD6326B69ECB00D9B7D4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FABCBD4E26B69E8700D9B7D4 /* StartViewController.swift */,
+				FABCBD6526B69F5500D9B7D4 /* RegisterViewController.swift */,
+				FABCBD6926B69FFC00D9B7D4 /* LoginViewController.swift */,
+				FABCBD6C26B6A01800D9B7D4 /* ChatViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +154,7 @@
 			files = (
 				FABCBD5726B69E8C00D9B7D4 /* LaunchScreen.storyboard in Resources */,
 				FABCBD5426B69E8C00D9B7D4 /* Assets.xcassets in Resources */,
+				FABCBD6026B69EA800D9B7D4 /* README.md in Resources */,
 				FABCBD5226B69E8700D9B7D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,9 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FABCBD4F26B69E8700D9B7D4 /* ViewController.swift in Sources */,
+				FABCBD4F26B69E8700D9B7D4 /* StartViewController.swift in Sources */,
 				FABCBD4B26B69E8700D9B7D4 /* AppDelegate.swift in Sources */,
 				FABCBD4D26B69E8700D9B7D4 /* SceneDelegate.swift in Sources */,
+				FABCBD6A26B69FFC00D9B7D4 /* LoginViewController.swift in Sources */,
+				FABCBD6D26B6A01800D9B7D4 /* ChatViewController.swift in Sources */,
+				FABCBD6626B69F5500D9B7D4 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
