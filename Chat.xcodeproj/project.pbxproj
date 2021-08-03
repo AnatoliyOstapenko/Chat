@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		FABCBD6626B69F5500D9B7D4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCBD6526B69F5500D9B7D4 /* RegisterViewController.swift */; };
 		FABCBD6A26B69FFC00D9B7D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCBD6926B69FFC00D9B7D4 /* LoginViewController.swift */; };
 		FABCBD6D26B6A01800D9B7D4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCBD6C26B6A01800D9B7D4 /* ChatViewController.swift */; };
+		FAD58BC126B9A23700AFC76C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAD58BC026B9A23700AFC76C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FABCBD6526B69F5500D9B7D4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		FABCBD6926B69FFC00D9B7D4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FABCBD6C26B6A01800D9B7D4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		FAD58BC026B9A23700AFC76C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,6 @@
 				62DBA7974FE5BB365D47B63E /* Pods-Chat.debug.xcconfig */,
 				98AFFD5B63AC9D5884890CB4 /* Pods-Chat.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -97,6 +98,7 @@
 				FABCBD5326B69E8C00D9B7D4 /* Assets.xcassets */,
 				FABCBD5526B69E8C00D9B7D4 /* LaunchScreen.storyboard */,
 				FABCBD5826B69E8C00D9B7D4 /* Info.plist */,
+				FAD58BC026B9A23700AFC76C /* GoogleService-Info.plist */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -181,6 +183,7 @@
 			files = (
 				FABCBD5726B69E8C00D9B7D4 /* LaunchScreen.storyboard in Resources */,
 				FABCBD5426B69E8C00D9B7D4 /* Assets.xcassets in Resources */,
+				FAD58BC126B9A23700AFC76C /* GoogleService-Info.plist in Resources */,
 				FABCBD6026B69EA800D9B7D4 /* README.md in Resources */,
 				FABCBD5226B69E8700D9B7D4 /* Main.storyboard in Resources */,
 			);
