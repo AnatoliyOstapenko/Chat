@@ -6,7 +6,7 @@ Chat is a free mobile messaging app used for instant chatting
 
 To learn:
 
-How to integrate third party libraries in your app using Cocoapods and Swift Package Manager.
+How to integrate third party libraries in app using Cocoapods and Swift Package Manager.
 
 How to store data in the cloud using Firebase Firestore.
 

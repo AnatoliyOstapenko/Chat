@@ -101,7 +101,7 @@
                                                     <constraint firstAttribute="height" constant="150" id="lGt-Qa-qUR"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C    H    A    T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRC-MI-eox">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C    H    A    T" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRC-MI-eox" customClass="CLTypingLabel" customModule="CLTypingLabel">
                                                 <rect key="frame" x="0.0" y="362" width="414" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="g6v-En-m1H"/>
@@ -203,7 +203,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" red="0.98431372549999996" green="0.8980392157" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Nmc-dl-wo4">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="Nmc-dl-wo4">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nmc-dl-wo4" id="WbL-8j-bJS">
@@ -365,8 +365,11 @@
             <point key="canvasLocation" x="553.62318840579712" y="75.669642857142847"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="SRC-MI-eox"/>
+    </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="uTu-h1-L8l"/>
+        <segue reference="xah-CQ-1gE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Group 2" width="298" height="93"/>
