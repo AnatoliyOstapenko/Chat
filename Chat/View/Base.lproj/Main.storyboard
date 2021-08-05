@@ -209,19 +209,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b1d-ov-d8O">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b1d-ov-d8O">
                                 <rect key="frame" x="0.0" y="88" width="414" height="694"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="Nmc-dl-wo4">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ReusableCell" id="Nmc-dl-wo4">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nmc-dl-wo4" id="WbL-8j-bJS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -242,22 +241,21 @@
                                             <action selector="sendButtonPressed:" destination="whj-lN-yeE" eventType="touchUpInside" id="ctT-Qo-E5v"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibg-bD-meL">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="80"/>
-                                        <color key="backgroundColor" red="0.98431372549999996" green="0.8980392157" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="textColor" red="0.98431372549999996" green="0.8980392157" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ibg-bD-meL">
+                                        <rect key="frame" x="10" y="15" width="324" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.8980392157" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="pzz-6y-U87" firstAttribute="top" secondItem="CBf-B5-UEv" secondAttribute="top" id="KXj-z5-GoF"/>
-                                    <constraint firstItem="ibg-bD-meL" firstAttribute="leading" secondItem="CBf-B5-UEv" secondAttribute="leading" id="QVy-zR-T0m"/>
-                                    <constraint firstItem="ibg-bD-meL" firstAttribute="top" secondItem="CBf-B5-UEv" secondAttribute="top" id="S9E-ji-iYC"/>
+                                    <constraint firstItem="ibg-bD-meL" firstAttribute="leading" secondItem="CBf-B5-UEv" secondAttribute="leading" constant="10" id="QVy-zR-T0m"/>
+                                    <constraint firstItem="ibg-bD-meL" firstAttribute="top" secondItem="CBf-B5-UEv" secondAttribute="top" constant="15" id="S9E-ji-iYC"/>
                                     <constraint firstItem="pzz-6y-U87" firstAttribute="leading" secondItem="ibg-bD-meL" secondAttribute="trailing" id="T3s-yf-c22"/>
                                     <constraint firstAttribute="bottom" secondItem="pzz-6y-U87" secondAttribute="bottom" id="dgj-zy-jmW"/>
-                                    <constraint firstAttribute="bottom" secondItem="ibg-bD-meL" secondAttribute="bottom" id="eYB-UZ-ESJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ibg-bD-meL" secondAttribute="bottom" constant="15" id="eYB-UZ-ESJ"/>
                                     <constraint firstAttribute="trailing" secondItem="pzz-6y-U87" secondAttribute="trailing" id="flj-L2-4MQ"/>
                                     <constraint firstAttribute="height" constant="80" id="iyL-rR-8cu"/>
                                 </constraints>
@@ -305,14 +303,14 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bkw-a7-FX7">
                                         <rect key="frame" x="0.0" y="0.0" width="360" height="300"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="EMAIL" textAlignment="center" minimumFontSize="17" background="Group 2" translatesAutoresizingMaskIntoConstraints="NO" id="ldw-5D-fGT">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1@mail.com" borderStyle="line" placeholder="EMAIL" textAlignment="center" minimumFontSize="17" background="Group 2" translatesAutoresizingMaskIntoConstraints="NO" id="ldw-5D-fGT">
                                                 <rect key="frame" x="0.0" y="0.0" width="360" height="100"/>
                                                 <color key="tintColor" red="0.2666666667" green="0.60392156860000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.2666666667" green="0.60392156860000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="PASSWORD" textAlignment="center" minimumFontSize="17" background="Group 2" translatesAutoresizingMaskIntoConstraints="NO" id="KOB-dr-k91">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="line" placeholder="PASSWORD" textAlignment="center" minimumFontSize="17" background="Group 2" translatesAutoresizingMaskIntoConstraints="NO" id="KOB-dr-k91">
                                                 <rect key="frame" x="0.0" y="100" width="360" height="100"/>
                                                 <color key="tintColor" red="0.2666666667" green="0.60392156860000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.2666666667" green="0.60392156860000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -398,7 +396,7 @@
         <designable name="SRC-MI-eox"/>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="xah-CQ-1gE"/>
+        <segue reference="uTu-h1-L8l"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Group 2" width="298" height="93"/>
