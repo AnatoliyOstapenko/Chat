@@ -61,7 +61,7 @@
                                     <constraint firstAttribute="width" constant="360" id="vN9-o9-WUj"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PYS-ea-H9X" userLabel="WarningLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PYS-ea-H9X" userLabel="WarningLabel" customClass="CLTypingLabel" customModule="CLTypingLabel">
                                 <rect key="frame" x="0.0" y="388" width="414" height="474"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="0.2666666667" green="0.60392156860000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -394,10 +394,11 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="PYS-ea-H9X"/>
         <designable name="SRC-MI-eox"/>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="uTu-h1-L8l"/>
+        <segue reference="xah-CQ-1gE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Group 2" width="298" height="93"/>
