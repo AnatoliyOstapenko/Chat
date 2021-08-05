@@ -13,6 +13,8 @@ target 'Chat' do
   pod 'Firebase/Auth'
   # added Cloud Firestore from Firebase SDK
   pod 'Firebase/Firestore'
+  
+  # fixed many pop-up errors:
   post_install do |installer|
    installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|

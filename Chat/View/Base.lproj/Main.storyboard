@@ -34,7 +34,7 @@
                                                 <color key="tintColor" red="0.2666666667" green="0.60392156860000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.2666666667" green="0.60392156860000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KMK-8M-gEy">
                                                 <rect key="frame" x="0.0" y="200" width="360" height="100"/>
@@ -61,18 +61,29 @@
                                     <constraint firstAttribute="width" constant="360" id="vN9-o9-WUj"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PYS-ea-H9X" userLabel="WarningLabel">
+                                <rect key="frame" x="0.0" y="388" width="414" height="474"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.2666666667" green="0.60392156860000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O0E-H9-TEM"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.8980392157" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Xfv-GH-sqy" firstAttribute="centerX" secondItem="Nue-3O-v6W" secondAttribute="centerX" id="15L-U3-VkL"/>
                             <constraint firstItem="Xfv-GH-sqy" firstAttribute="top" secondItem="O0E-H9-TEM" secondAttribute="top" id="Xe0-nK-Jw7"/>
+                            <constraint firstItem="PYS-ea-H9X" firstAttribute="leading" secondItem="O0E-H9-TEM" secondAttribute="leading" id="ceo-cG-nLR"/>
+                            <constraint firstItem="O0E-H9-TEM" firstAttribute="trailing" secondItem="PYS-ea-H9X" secondAttribute="trailing" id="jPg-f5-uBg"/>
+                            <constraint firstItem="PYS-ea-H9X" firstAttribute="top" secondItem="Xfv-GH-sqy" secondAttribute="bottom" id="nP7-Ma-YXK"/>
+                            <constraint firstItem="O0E-H9-TEM" firstAttribute="bottom" secondItem="PYS-ea-H9X" secondAttribute="bottom" id="ojy-Rj-uNn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cc9-dB-TFR"/>
                     <connections>
                         <outlet property="emailTextField" destination="72T-au-Qgj" id="2yx-80-YjS"/>
                         <outlet property="passwordTextField" destination="fyF-qu-FQp" id="ACr-5E-Dcc"/>
+                        <outlet property="warningLabel" destination="PYS-ea-H9X" id="b6x-sa-kKw"/>
                         <segue destination="whj-lN-yeE" kind="show" identifier="registerToChat" id="xah-CQ-1gE"/>
                     </connections>
                 </viewController>
@@ -200,8 +211,8 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b1d-ov-d8O">
                                 <rect key="frame" x="0.0" y="88" width="414" height="694"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="sectionIndexBackgroundColor" red="0.98431372549999996" green="0.8980392157" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="Nmc-dl-wo4">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
@@ -210,7 +221,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.98431372549999996" green="0.8980392157" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -300,7 +311,7 @@
                                                 <color key="tintColor" red="0.2666666667" green="0.60392156860000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" red="0.2666666667" green="0.60392156860000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="fgy-13-Qaf">
                                                 <rect key="frame" x="0.0" y="200" width="360" height="100"/>

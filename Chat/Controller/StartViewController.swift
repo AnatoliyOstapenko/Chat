@@ -28,7 +28,7 @@ class StartViewController: UIViewController {
     @IBAction func loginButtonPressed(_ sender: UIButton) {
     }
     
-    
+    // I left this func to fresh my memory when animation func can be needed
     // func for animation letters showing up
     func animationChatLabel() {
         chatLabel.text = ""
