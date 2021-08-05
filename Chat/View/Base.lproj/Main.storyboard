@@ -338,17 +338,28 @@
                                     <constraint firstAttribute="height" constant="300" id="xKb-tc-p6n"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rXN-0l-Lts" userLabel="LoginWarningLabel">
+                                <rect key="frame" x="0.0" y="388" width="414" height="474"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.2666666667" green="0.60392156860000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dtK-Jx-RgW"/>
                         <color key="backgroundColor" red="0.98431372549999996" green="0.8980392157" blue="0.85882352939999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Mck-SP-7Xs" firstAttribute="top" secondItem="dtK-Jx-RgW" secondAttribute="top" id="CCC-ua-ZLP"/>
+                            <constraint firstItem="rXN-0l-Lts" firstAttribute="leading" secondItem="dtK-Jx-RgW" secondAttribute="leading" id="Ya5-bl-dIu"/>
+                            <constraint firstItem="dtK-Jx-RgW" firstAttribute="trailing" secondItem="rXN-0l-Lts" secondAttribute="trailing" id="ZmK-dB-y6N"/>
                             <constraint firstItem="Mck-SP-7Xs" firstAttribute="centerX" secondItem="ifv-SL-heK" secondAttribute="centerX" id="gHl-rF-h4X"/>
+                            <constraint firstItem="rXN-0l-Lts" firstAttribute="top" secondItem="Mck-SP-7Xs" secondAttribute="bottom" id="woc-nI-uxo"/>
+                            <constraint firstItem="dtK-Jx-RgW" firstAttribute="bottom" secondItem="rXN-0l-Lts" secondAttribute="bottom" id="y5Q-sb-aPG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SOi-jJ-Oe8"/>
                     <connections>
                         <outlet property="emailTextField" destination="ldw-5D-fGT" id="Y1d-np-Wed"/>
+                        <outlet property="loginWarningLabel" destination="rXN-0l-Lts" id="thJ-et-JMR"/>
                         <outlet property="passwordTextField" destination="KOB-dr-k91" id="i4x-J1-XRI"/>
                         <segue destination="whj-lN-yeE" kind="show" identifier="loginToChat" id="uTu-h1-L8l"/>
                     </connections>
@@ -380,7 +391,7 @@
         <designable name="SRC-MI-eox"/>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="xah-CQ-1gE"/>
+        <segue reference="uTu-h1-L8l"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Group 2" width="298" height="93"/>

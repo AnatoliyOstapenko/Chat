@@ -24,7 +24,7 @@ class RegisterViewController: UIViewController {
     @IBAction func registerButtonPressed(_ sender: UIButton) {
         
         //created constants email and password to transfer them to Firebase
-        // unwraped them beause both of them optional
+        // unwraped them beause both of them are optional
         guard let email = emailTextField.text, let password = passwordTextField.text else {
             print("Error in registerButtonPressed")
             return
