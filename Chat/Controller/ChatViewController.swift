@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatViewController: UIViewController {
     
@@ -14,10 +15,27 @@ class ChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // hide "go back" button from screen
+        navigationItem.hidesBackButton = true
     }
 
     @IBAction func sendButtonPressed(_ sender: UIButton) {
+        
     }
     
+    @IBAction func logoutButtonPressed(_ sender: UIBarButtonItem) {
+       
+        //logout for a current user (https://firebase.google.com/docs/auth/ios/password-auth?authuser=0)
+        let firebaseAuth = Auth.auth()
+    do {
+      try firebaseAuth.signOut()
+        // Poped the first top view controller from the navigation stack and updates the display.
+        navigationController?.popToRootViewController(animated: true)
+        
+    } catch let signOutError as NSError {
+      print("Error signing out: %@", signOutError)
+    }
+      
+        
+    }
 }
