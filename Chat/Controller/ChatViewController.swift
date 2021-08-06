@@ -14,7 +14,11 @@ class ChatViewController: UIViewController {
         
         Message(sender: "1@mail.com", body: "Hi there!"),
         Message(sender: "2@mail.com", body: "Hello Sir!"),
-        Message(sender: "1@mail.com", body: "How are doing?")
+        Message(sender: "1@mail.com", body: "How are doing?"),
+        Message(sender: "2@mail.com", body: "So what"),
+        Message(sender: "1@mail.com", body: "Nothing to change"),
+        Message(sender: "2@mail.com", body: "Is it bot"),
+        Message(sender: "1@mail.com", body: "Awsome!")
     ]
     
     
@@ -24,6 +28,7 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         //triggered UITableViewDataSource protocol
         chatTableView.dataSource = self
         
@@ -31,12 +36,16 @@ class ChatViewController: UIViewController {
         title = "C  H  A  T"
         // hide "go back" button from screen
         navigationItem.hidesBackButton = true
-        //changed the background color
-        chatTableView.backgroundColor = UIColor.white
+
         // chenged color of navigation bar
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9843137255, green: 0.8980392157, blue: 0.8588235294, alpha: 1)
         
-        
+        // Registers a nib object containing a cell with the table view under a specified identifier
+        // registered TableViewCell.xib
+        // identifier name shold be the same TableViewCell in Main.Storyboard - "ReusableCell"
+        chatTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
+        // switch to Light Mode screen (avoid dark background table view)
+        overrideUserInterfaceStyle = .light
         
     }
 
@@ -60,21 +69,27 @@ class ChatViewController: UIViewController {
         
     }
 }
+
+//MARK: TableView DataSource
+
 //added UITableViewDataSource protocol to manage data and provide cells for a table view.
 extension ChatViewController: UITableViewDataSource {
     
-    // set numbers of rows in table view
+    // set numbers of rows in TableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count
     }
     
-    // using cells
+    // set cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // set "ReusableCell" cell as K.cellIdentifier / indexPath point to row
-        let cell = tableView.dequeueReusableCell(withIdentifier: K.cellIdentifier, for: indexPath)
-        //changed the text color
-        cell.textLabel?.textColor = #colorLiteral(red: 0.2666666667, green: 0.6039215686, blue: 0.6274509804, alpha: 1)
-        cell.textLabel?.text = messages[indexPath.row].body
+        
+        // Returns a reusable table-view cell object as! MessageCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! TableViewCell
+        
+        //change background color to white
+        tableView.backgroundColor = .white
+        
+        cell.cellLabel?.text = messages[indexPath.row].body
         return cell
     }
     
