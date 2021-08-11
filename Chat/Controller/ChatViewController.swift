@@ -7,6 +7,8 @@
 
 import UIKit
 import Firebase
+//after IQKeyboardManager class added from CocoaPods, it's needed to import IQKeyboardManager
+import IQKeyboardManager
 
 class ChatViewController: UIViewController {
     
@@ -57,7 +59,7 @@ class ChatViewController: UIViewController {
             if let error = error {
                 print(error.localizedDescription)
             } else {
-                
+                //message was sent
                 print("successfuly complete")
             }
             
@@ -69,7 +71,7 @@ class ChatViewController: UIViewController {
     
     @IBAction func logoutButtonPressed(_ sender: UIBarButtonItem) {
        
-        //logout for a current user (https://firebase.google.com/docs/auth/ios/password-auth?authuser=0)
+        //logout for a current user in Firebase (https://firebase.google.com/docs/auth/ios/password-auth?authuser=0)
         let firebaseAuth = Auth.auth()
     do {
       try firebaseAuth.signOut()
@@ -84,10 +86,8 @@ class ChatViewController: UIViewController {
     }
     // Retrieving an information from Cloud Firestore
     func loadMessage() {
-        
-        messages = []
-        
-        db.collection("messages").addSnapshotListener { (querySnapshot, error) in
+
+        db.collection("messages").order(by: "date").addSnapshotListener { (querySnapshot, error) in
             
             // clear a privious range of messages, but leave all range you send to Firebase
             self.messages.removeAll()
@@ -110,7 +110,7 @@ class ChatViewController: UIViewController {
                         let newMessage = Message(sender: messageSender, body: messageBody)
                         self.messages.append(newMessage)
                         
-                        // set dispatch queue to avoid to freez app in case of bad internet connection
+                        // set main dispatch to avoid app freezing in case of bad internet connection
                         DispatchQueue.main.async {
                             // retrieved the last messages from Firebase
                             // Reloads the rows and sections of the table view.
