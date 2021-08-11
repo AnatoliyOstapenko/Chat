@@ -18,7 +18,7 @@ class TableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         // set a corner radius for cellView
-        cellView.layer.cornerRadius = cellView.frame.size.height / 5
+        cellView.layer.cornerRadius = cellView.frame.size.height / 3
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -38,7 +38,7 @@ class RegisterViewController: UIViewController {
                 self.warningLabel.text = "\(error.localizedDescription) \nPlease, try again"
             } else {
                 // navigate to the ChatViewController (withIdentifier is segue's name, sender is self)
-                self.performSegue(withIdentifier: K.registerSegue, sender: self)
+                self.performSegue(withIdentifier: "registerToChat", sender: self)
             }
             
             

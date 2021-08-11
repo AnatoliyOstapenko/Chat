@@ -21,7 +21,6 @@
 		FABCBD6A26B69FFC00D9B7D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCBD6926B69FFC00D9B7D4 /* LoginViewController.swift */; };
 		FABCBD6D26B6A01800D9B7D4 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABCBD6C26B6A01800D9B7D4 /* ChatViewController.swift */; };
 		FAD58BC126B9A23700AFC76C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FAD58BC026B9A23700AFC76C /* GoogleService-Info.plist */; };
-		FAE5796526BC29E300AF2210 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5796426BC29E300AF2210 /* Constants.swift */; };
 		FAE5796A26BC43F800AF2210 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE5796926BC43F800AF2210 /* Message.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +43,6 @@
 		FABCBD6926B69FFC00D9B7D4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FABCBD6C26B6A01800D9B7D4 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FAD58BC026B9A23700AFC76C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		FAE5796426BC29E300AF2210 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FAE5796926BC43F800AF2210 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,7 +134,6 @@
 		FAE5796726BC29EF00AF2210 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FAE5796426BC29E300AF2210 /* Constants.swift */,
 				FAE5796926BC43F800AF2210 /* Message.swift */,
 			);
 			path = Model;
@@ -263,7 +260,6 @@
 				FABCBD4B26B69E8700D9B7D4 /* AppDelegate.swift in Sources */,
 				FABCBD4D26B69E8700D9B7D4 /* SceneDelegate.swift in Sources */,
 				FABCBD6A26B69FFC00D9B7D4 /* LoginViewController.swift in Sources */,
-				FAE5796526BC29E300AF2210 /* Constants.swift in Sources */,
 				FA83E31B26BDD37900C42888 /* TableViewCell.swift in Sources */,
 				FAE5796A26BC43F800AF2210 /* Message.swift in Sources */,
 				FABCBD6D26B6A01800D9B7D4 /* ChatViewController.swift in Sources */,

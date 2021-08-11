@@ -6,6 +6,7 @@
 //
 
 import UIKit
+
 // import Firebase
 import Firebase
 
@@ -19,6 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // The entry point of Firebase SDKs
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
+        
+        // Initialize an instance of Cloud Firestore
+        let db = Firestore.firestore()
+        
+        print(db)
         
         return true
     }

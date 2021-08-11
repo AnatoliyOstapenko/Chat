@@ -28,7 +28,6 @@ class LoginViewController: UIViewController {
             print("Error in loginButtonPressed")
             return
         }
-        
         //login for a current user (https://firebase.google.com/docs/auth/ios/password-auth?authuser=0)
         // deleted guard let strongSelf = self else { return } and extra useless things
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
@@ -37,7 +36,7 @@ class LoginViewController: UIViewController {
             if let error = error {
                 self.loginWarningLabel.text = error.localizedDescription
             } else {
-                self.performSegue(withIdentifier: K.loginSegue, sender: self)
+                self.performSegue(withIdentifier: "loginToChat", sender: self)
             }
             
         }
