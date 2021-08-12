@@ -149,7 +149,16 @@ extension ChatViewController: UITableViewDataSource {
         tableView.backgroundColor = .white
         
         // dispatch a new text from message array (via Message struct) and show it pn screen (TableViewCell)
-        cell.cellLabel?.text = "zolupa message.body"
+        cell.cellLabel?.text = message.body
+       
+        
+        // check if the sender in array is related sender in Fairbase
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.backgroundColor = #colorLiteral(red: 0.3921568627, green: 0.7882352941, blue: 0.8117647059, alpha: 1)
+        }
+        
         return cell
     }
     
