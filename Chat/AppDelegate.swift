@@ -10,6 +10,10 @@ import UIKit
 // import Firebase
 import Firebase
 
+//after IQKeyboardManager class added from CocoaPods, it's needed to import IQKeyboardManager
+import IQKeyboardManager
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -23,8 +27,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Initialize an instance of Cloud Firestore
         let db = Firestore.firestore()
-        
         print(db)
+        
+        // enabled IQKeyboardManager from CocoaPods
+        IQKeyboardManager.shared().isEnabled = true
+        
+        // hide toolbar of keyboard in CocoaPods framework
+        IQKeyboardManager.shared().isEnableAutoToolbar = false
+        
+        // Hide keyboard on touches outside textfield
+        IQKeyboardManager.shared().shouldResignOnTouchOutside = true
         
         return true
     }

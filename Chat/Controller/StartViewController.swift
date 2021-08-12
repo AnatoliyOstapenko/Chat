@@ -19,7 +19,8 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         // add string to a new CLTypingLabel
         chatLabel.text = "let's chat"
-        
+        // chenged color of navigation bar
+        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9843137255, green: 0.8980392157, blue: 0.8588235294, alpha: 1)
     }
 
     @IBAction func registerButtonPressed(_ sender: UIButton) {

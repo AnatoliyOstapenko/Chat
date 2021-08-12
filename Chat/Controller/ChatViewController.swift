@@ -7,14 +7,13 @@
 
 import UIKit
 import Firebase
-//after IQKeyboardManager class added from CocoaPods, it's needed to import IQKeyboardManager
-import IQKeyboardManager
+
 
 class ChatViewController: UIViewController {
     
     // Initialize an instance of Cloud Firestore
     let db = Firestore.firestore()
-    // create array to us struct Message
+    // create array to use struct Message
     var messages: [Message] = []
     
     
@@ -89,7 +88,7 @@ class ChatViewController: UIViewController {
 
         db.collection("messages").order(by: "date").addSnapshotListener { (querySnapshot, error) in
             
-            // clear a privious range of messages, but leave all range you send to Firebase
+            // clear a privious range of messages, but leave all range you sent to Firebase
             self.messages.removeAll()
             // unwraping error to check nil is available
             if let error = error {
@@ -140,13 +139,17 @@ extension ChatViewController: UITableViewDataSource {
     // set cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        // create message to get acces to row in Table View
+        let message = messages[indexPath.row]
+        
         // Returns a reusable table-view cell object as! MessageCell
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! TableViewCell
         
         //change background color to white
         tableView.backgroundColor = .white
         
-        cell.cellLabel?.text = messages[indexPath.row].body
+        // dispatch a new text from message array (via Message struct) and show it pn screen (TableViewCell)
+        cell.cellLabel?.text = "zolupa message.body"
         return cell
     }
     
