@@ -136,7 +136,7 @@ extension ChatViewController: UITableViewDataSource {
         
     }
     
-    // set cells
+    // set cell and changing UI by TableViewCell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // create message to get acces to row in Table View
@@ -148,15 +148,21 @@ extension ChatViewController: UITableViewDataSource {
         //change background color to white
         tableView.backgroundColor = .white
         
-        // dispatch a new text from message array (via Message struct) and show it pn screen (TableViewCell)
+        // dispatch a new text from message array (via Message struct) and show it on the screen (TableViewCell)
         cell.cellLabel?.text = message.body
        
         
         // check if the sender in array is related sender in Fairbase
+        
         if message.sender == Auth.auth().currentUser?.email {
+            // user is a sender
             cell.leftImageView.isHidden = true
             cell.rightImageView.isHidden = false
-            cell.backgroundColor = #colorLiteral(red: 0.3921568627, green: 0.7882352941, blue: 0.8117647059, alpha: 1)
+        } else {
+            // coresspondent is a sender
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
+            cell.cellView.backgroundColor = #colorLiteral(red: 0.3921568627, green: 0.7882352941, blue: 0.8117647059, alpha: 1)
         }
         
         return cell
