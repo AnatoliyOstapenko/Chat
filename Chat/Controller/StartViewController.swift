@@ -32,8 +32,8 @@ class StartViewController: UIViewController {
         super.viewDidLoad()
         // add string to a new CLTypingLabel
         chatLabel.text = "let's chat"
-        // hide top navigation bar
-        //navigationController?.isNavigationBarHidden = true
+        // clean background of bar
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         
     }
 
