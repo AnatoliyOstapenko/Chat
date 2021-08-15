@@ -15,7 +15,7 @@ class StartViewController: UIViewController {
   //after CLTypingLabel class added from CocoaPods, it's needed to change UILabel to CLTypingLabel
     @IBOutlet weak var chatLabel: CLTypingLabel!
     
-//MARK: - Block of code to hide navigation bar in StartViewController
+//MARK: - Block of code to hide navigation bar in StartViewController, but show it in next ViewController
     
     override func viewWillAppear(_ animated: Bool) {
         // call super when override func from super class
