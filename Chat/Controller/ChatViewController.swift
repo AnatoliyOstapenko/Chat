@@ -32,10 +32,10 @@ class ChatViewController: UIViewController {
         // hide "go back" button from screen
         navigationItem.hidesBackButton = true
 
-        // chenged color of navigation bar
+        // changed color of navigation bar
         navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9843137255, green: 0.8980392157, blue: 0.8588235294, alpha: 1)
         
-        // Registers a nib object containing a cell with the table view under a specified identifier
+        // Registered a nib object containing a cell with the table view under a specified identifier
         // registered TableViewCell.xib
         // identifier name shold be the same TableViewCell in Main.Storyboard - "ReusableCell"
         chatTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
@@ -58,7 +58,12 @@ class ChatViewController: UIViewController {
             if let error = error {
                 print(error.localizedDescription)
             } else {
-                //message was sent
+                //clear the chatTextField when user pressed button "sendButtonPressed"
+                // set main dispatch queue (GCD)
+                DispatchQueue.main.async {
+                    self.chatTextField.text = ""
+                }
+                
                 print("successfuly complete")
             }
             
@@ -112,8 +117,13 @@ class ChatViewController: UIViewController {
                         // set main dispatch to avoid app freezing in case of bad internet connection
                         DispatchQueue.main.async {
                             // retrieved the last messages from Firebase
-                            // Reloads the rows and sections of the table view.
+                            // Reloads the rows and sections in table view.
                             self.chatTableView.reloadData()
+                            
+                            // set indexPath to specify quantity attributes in array and quantity section of TableView
+                            let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                            // fix sticky messages at the bottom of the screen
+                            self.chatTableView.scrollToRow(at: indexPath, at: .top, animated: true)
                         }
                         
                     }
@@ -150,7 +160,7 @@ extension ChatViewController: UITableViewDataSource {
         
         // dispatch a new text from message array (via Message struct) and show it on the screen (TableViewCell)
         cell.cellLabel?.text = message.body
-       
+        
         
         // check if the sender in array is related sender in Fairbase
         
@@ -158,11 +168,14 @@ extension ChatViewController: UITableViewDataSource {
             // user is a sender
             cell.leftImageView.isHidden = true
             cell.rightImageView.isHidden = false
+            cell.cellView.backgroundColor = #colorLiteral(red: 0.9843137255, green: 0.8980392157, blue: 0.8588235294, alpha: 1)
+            cell.cellLabel.textColor = #colorLiteral(red: 0.2666666667, green: 0.6039215686, blue: 0.6274509804, alpha: 1)
         } else {
             // coresspondent is a sender
             cell.leftImageView.isHidden = false
             cell.rightImageView.isHidden = true
             cell.cellView.backgroundColor = #colorLiteral(red: 0.3921568627, green: 0.7882352941, blue: 0.8117647059, alpha: 1)
+            cell.cellLabel.textColor = .white
         }
         
         return cell

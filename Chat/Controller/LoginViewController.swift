@@ -38,6 +38,7 @@ class LoginViewController: UIViewController {
             if let error = error {
                 self.loginWarningLabel.text = error.localizedDescription
             } else {
+                // switch on a new screen by segue
                 self.performSegue(withIdentifier: "loginToChat", sender: self)
             }
             

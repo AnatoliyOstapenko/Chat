@@ -15,21 +15,42 @@ class StartViewController: UIViewController {
   //after CLTypingLabel class added from CocoaPods, it's needed to change UILabel to CLTypingLabel
     @IBOutlet weak var chatLabel: CLTypingLabel!
     
+//MARK: - Block of code to hide navigation bar in StartViewController
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // call super when override func from super class
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        // call super when override func from super class
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+//MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         // add string to a new CLTypingLabel
         chatLabel.text = "let's chat"
-        // chenged color of navigation bar
-        navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9843137255, green: 0.8980392157, blue: 0.8588235294, alpha: 1)
+        // hide top navigation bar
+        //navigationController?.isNavigationBarHidden = true
+        
     }
 
     @IBAction func registerButtonPressed(_ sender: UIButton) {
+        
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
     }
     
-    // I left this func to fresh my memory when animation func can be needed
+    
+    
+    
+    
+    
+    //MARK: - I left this func to fresh my memory when animation func can be needed
     // func for animation letters showing up
     func animationChatLabel() {
         chatLabel.text = ""

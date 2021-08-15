@@ -38,6 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Hide keyboard on touches outside textfield
         IQKeyboardManager.shared().shouldResignOnTouchOutside = true
         
+       
+        
         return true
     }
 
