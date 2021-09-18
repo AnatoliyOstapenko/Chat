@@ -37,7 +37,7 @@ class ChatViewController: UIViewController {
         
         // Registered a nib object containing a cell with the table view under a specified identifier
         // registered TableViewCell.xib
-        // identifier name shold be the same TableViewCell in Main.Storyboard - "ReusableCell"
+        // identifier name should be the same TableViewCell in Main.Storyboard - "ReusableCell"
         chatTableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         
         // switch to Light Mode screen (avoid dark background table view)
@@ -117,7 +117,7 @@ class ChatViewController: UIViewController {
                         // set main dispatch to avoid app freezing in case of bad internet connection
                         DispatchQueue.main.async {
                             // retrieved the last messages from Firebase
-                            // Reloads the rows and sections in table view.
+                            // Reload data (add a new row) table view.
                             self.chatTableView.reloadData()
                             
                             // set indexPath to specify quantity attributes in array and quantity section of TableView
